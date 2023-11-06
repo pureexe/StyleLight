@@ -1,6 +1,8 @@
 #!/bin/dash
 # alias blender=/home/deep/Downloads/blender-2.93.4-linux-x64/blender
-alias blender=/home/deep/Downloads/blender-3.0.1-linux-x64/blender
+#alias blender=/home/deep/Downloads/blender-3.0.1-linux-x64/blender
+#PURE: change default blender
+alias blender=/home/vll/software/blender-3.6.5-linux-x64/blender 
 
 
 test_data_path=$1
