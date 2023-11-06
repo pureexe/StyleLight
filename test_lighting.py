@@ -41,7 +41,9 @@ def run_PTI(run_name='', use_wandb=False):
 
     if not hyperparameters.edit:
         # root_path = '/home/deep/projects/mini-stylegan2/Evaluation/data/ground_truth_ours_neg0.6_60degree_HR/crop_test_high_resolution/*png'
-        root_path = '/mnt/disks/data/datasets/IndoorHDRDataset2018-debug-128x256-data-splits2/test_crop/*png'
+        #root_path = '/mnt/disks/data/datasets/IndoorHDRDataset2018-debug-128x256-data-splits2/test_crop/*png'
+        # pure: Make root path correct 
+        root_path = '/data2/pakkapon/datasets/IndoorHDRDataset2018_stylightdataset-256x512/test_crop/*png'
         dataloader = sorted(glob.glob(root_path))[0:1] # before rebbutal
         # dataloader = sorted(glob.glob(root_path)) 
 

@@ -24,8 +24,9 @@ def pre_process_data(src_file, to_folder, phase, file_txt):
         file_paths = glob.glob(os.path.join(src_file,file_+'*'))
         print(f'k/total,files:{k}/{len(data_list)},{file_paths}')
         k = k+1
-        if k>2:
-          break
+        #PURE: disable early stop condition to run on all image
+        #if k>2:
+        #  break
         for one_path in file_paths:
             e = EnvironmentMap(one_path, 'latlong')
             if phase=='test':
@@ -50,17 +51,19 @@ def pre_process_data(src_file, to_folder, phase, file_txt):
             imsave(os.path.join(dst_folder,one_path.split('/')[-1]), e.data)
 
 ###########
-to_folder = '/mnt/disks/data/datasets/IndoorHDRDataset2018-debug2-'+str(pano_h)+'x'+str(pano_w)+'-data-splits2/'
-from_folder = '/mnt/disks/data/datasets/IndoorHDRDataset2018'
+# PURE: Change the dataset location
+to_folder = '/data2/pakkapon/datasets/IndoorHDRDataset2018_stylightdataset-'+str(pano_h)+'x'+str(pano_w)+'/'
+from_folder = '/data2/pakkapon/datasets/IndoorHDRDataset2018_test/'
 
 train_txt = 'train_org.txt'
 test_txt = 'test_selected.txt'
 
 if not os.path.exists(to_folder):
     os.mkdir(to_folder)
-    os.mkdir(os.path.join(to_folder, 'train'))
+    #os.mkdir(os.path.join(to_folder, 'train'))
     os.mkdir(os.path.join(to_folder, 'test'))
 
-pre_process_data(from_folder, to_folder, 'train', train_txt)  
+# PURE: Only preprocess for test dataset for faster speed
+#pre_process_data(from_folder, to_folder, 'train', train_txt)  
 pre_process_data(from_folder, to_folder, 'test', test_txt)
 
