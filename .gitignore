@@ -1,4 +1,10 @@
 *.pyc
+*.pyc
 training-runs-paper512-cyclic-new-training-128x256-ws_plus_coor2_accepted2/
 training-runs-paper512-cyclic-new-training-128x256-ws_plus_coor2-accepted/
 assets/network-snapshot-002000.pkl
+assets/IndoorHDRDataset2018_stylightdataset-128x256
+assets/IndoorHDRDataset2018_stylightdataset-256x512
+assets/output
+assets/save_videos
+evaluation/data
