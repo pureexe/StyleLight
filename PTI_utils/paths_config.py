@@ -18,7 +18,7 @@ dlib = './pretrained_models/align.dat'
 # checkpoints_dir = './checkpoints_without_light_mask'           ###### rebuttal
 
 # PURE: change save directory
-checkpoints_dir = "/data2/pakkapon/output/stylelight/indoor"
+checkpoints_dir = "assets/output/stylelight/indoor"
 #checkpoints_dir = './assets/checkpoints_without_light_mask_both_finetuned'           ###### rebuttal
 embedding_base_dir = './embeddings'                   #########
 styleclip_output_dir = './StyleCLIP_results'

@@ -45,3 +45,6 @@ regulizer_lpips_lambda = 0.01 # org 0.1
 edit = True
 edit_steps = 20
 percentile = 0.9
+
+# PURE: disable credit
+edit = False
