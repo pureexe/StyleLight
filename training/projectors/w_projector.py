@@ -64,7 +64,9 @@ def project(
     noise_bufs = {name: buf for (name, buf) in G.synthesis.named_buffers() if 'noise_const' in name}
 
     # Load VGG16 feature detector.
-    url = 'https://nvlabs-fi-cdn.nvidia.com/stylegan2-ada-pytorch/pretrained/metrics/vgg16.pt'
+    #url = 'https://nvlabs-fi-cdn.nvidia.com/stylegan2-ada-pytorch/pretrained/metrics/vgg16.pt'
+    #PURE: use local vgg instead because v100 cannot connect to the internet
+    url = '/ist/ist-share/vision/relight/weights/vgg16.pt'
     with dnnlib.util.open_url(url) as f:
         vgg16 = torch.jit.load(f).eval().to(device)
 
@@ -211,7 +213,10 @@ def edit(
     noise_bufs = {name: buf for (name, buf) in G.synthesis.named_buffers() if 'noise_const' in name}
 
     # Load VGG16 feature detector.
-    url = 'https://nvlabs-fi-cdn.nvidia.com/stylegan2-ada-pytorch/pretrained/metrics/vgg16.pt'
+    # url = 'https://nvlabs-fi-cdn.nvidia.com/stylegan2-ada-pytorch/pretrained/metrics/vgg16.pt'
+    #PURE: use local vgg instead because v100 cannot connect to the internet
+    url = '/ist/ist-share/vision/relight/weights/vgg16.pt'
+
     with dnnlib.util.open_url(url) as f:
         vgg16 = torch.jit.load(f).eval().to(device)
 
