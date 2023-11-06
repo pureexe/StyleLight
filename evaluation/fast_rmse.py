@@ -105,8 +105,10 @@ if tonemap:
     fake_path = './data/render_results/' + args.fake + '/'
     #real_path = './data/ground_truth/test_tone_'+args.real+'/'
     #real_path = './data/ground_truth_ours_neg0.6_60degree/test_tone_'+args.real+'/'
-    real_path = './data/ground_truth_ours_neg0.6_60degree_HR/test_tone_'+args.real+'/'
+    #real_path = './data/ground_truth_ours_neg0.6_60degree_HR/test_tone_'+args.real+'/'
     # real_path = './data/ground_truth_flip/test_tone_'+args.real+'/'
+    # PURE: Edit real path
+    real_path = './data/render_results/gt_128x256/'+args.real+'/'
 else:
     fake_path = './data/render_results/' + args.fake + '/'
     #real_path = './data/ground_truth/test'+args.real+'/'
